@@ -1,0 +1,27 @@
+body{
+    min-height: 100vh;
+}
+
+header{
+    min-height: 10vh;
+}
+
+footer{
+    min-height: 10vh;
+}
+
+main{
+    min-height: 80vh;
+}
+
+.main_center{
+    margin: 0;
+    padding: 0;
+    border: solid 1px black;
+}
+
+.calculator{
+    margin: 0;
+    padding: 0;
+}
+
