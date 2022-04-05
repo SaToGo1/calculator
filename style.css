@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
 body{
     min-height: 100vh;
 }
@@ -17,11 +21,236 @@ main{
 .main_center{
     margin: 0;
     padding: 0;
-    border: solid 1px black;
+    border: 1px solid black;
+    
+    display: flex;
+    justify-content: center;
 }
 
 .calculator{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+}
+/* ############################
+#       Display
+#
+#  ############################ */
+.calculator_display{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
+.calculator_display_operation{
+ 
+}
+
+.calculator_display_result{
+
+}
+
+/* ############################
+#          Buttons
+#       Numbers and operations
+#
+#  ############################ */
+.calculator_buttons{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+    border: 1px solid black;
+
+    display: flex;
+}
+
+/* ############################
+#       NUMBERS
+#
+#  ############################ */
+.calculator_buttons_numbers{
+    height: 100%;
+    width: 80%;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator_buttons_numbers_row1{
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;
+    
+    display: flex;
+}
+
+.calculator_buttons_numbers_row2{
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;  
+    
+    display: flex;
+}
+
+.calculator_buttons_numbers_row3{
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;
+    
+    display: flex;
+}
+
+.calculator_buttons_numbers_row4{
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;
+    
+    display: flex;
+}
+
+/* ############################
+#       ROW 1
+#  ############################ */
+.number_7{
+    height: 100%;
+    width: 34%;
+    border: 1px solid black; 
+}
+
+.number_8{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+.number_9{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+/* ############################
+#       ROW 2
+#  ############################ */
+.number_4{
+    height: 100%;
+    width: 34%;
+    border: 1px solid black; 
+}
+
+.number_5{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+.number_6{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+/* ############################
+#       ROW 3
+#  ############################ */
+.number_1{
+    height: 100%;
+    width: 34%;
+    border: 1px solid black; 
+}
+
+.number_2{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+.number_3{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+/* ############################
+#       ROW 4
+#  ############################ */
+.number_0{
+    height: 100%;
+    width: 34%;
+    border: 1px solid black; 
+}
+
+.number_point{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+.number_equal{
+    height: 100%;
+    width: 33%;
+    border: 1px solid black; 
+}
+
+/* ############################
+#       Operations
+#
+#  ############################ */
+.calculator_buttons_operations{
+    height: 100%;
+    width: 20%;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.operation_clear{
+    height: 20%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.operation_plus{
+    height: 20%;
+    width: 100%;
+    border: 1px solid black;
+
+    border-radius: 20%;
+}
+
+.operation_minus{
+    height: 20%;
+    width: 100%;
+    border: 1px solid black;
+
+    border-radius: 50%;
+}
+
+.operation_multiply{
+    height: 20%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.operation_divide{
+    height: 20%;
+    width: 100%;
+    border: 1px solid black;
+}
