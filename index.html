@@ -13,42 +13,42 @@
             <div class="calculator">
                 
                 <div class="calculator_display">
-                    <p class="calculator_display_operation">100*5</p>
-                    <p class="calculator_display_result">500</p>
+                    <p id="display_operation">100*5</p>
+                    <p id="display_result">0</p>
                 </div>
 
                 <div class="calculator_buttons">
                     <div class="calculator_buttons_numbers">
                         <div class="calculator_buttons_numbers_row1">
-                            <button class="number_7">7</button>
-                            <button class="number_8">8</button>
-                            <button class="number_9">9</button>
+                            <button id="number_7" onclick="saveNumbers('7')">7</button>
+                            <button id="number_8" onclick="saveNumbers('8')">8</button>
+                            <button id="number_9" onclick="saveNumbers('9')">9</button>
                         </div>
 
                         <div class="calculator_buttons_numbers_row2">
-                            <button class="number_4">4</button>
-                            <button class="number_5">5</button>
-                            <button class="number_6">6</button>
+                            <button id="number_4" onclick="saveNumbers('4')">4</button>
+                            <button id="number_5" onclick="saveNumbers('5')">5</button>
+                            <button id="number_6" onclick="saveNumbers('6')">6</button>
                         </div>
 
                         <div class="calculator_buttons_numbers_row3">
-                            <button class="number_1">1</button>
-                            <button class="number_2">2</button>
-                            <button class="number_3">3</button>
+                            <button id="number_1" onclick="saveNumbers('1')">1</button>
+                            <button id="number_2" onclick="saveNumbers('2')">2</button>
+                            <button id="number_3" onclick="saveNumbers('3')">3</button>
                         </div>
 
                         <div class="calculator_buttons_numbers_row4">
-                            <button class="number_0">0</button>
-                            <button class="number_point">.</button>
-                            <button class="number_equal">=</button>
+                            <button id="number_0" onclick="saveNumbers('0')">0</button>
+                            <button id="number_point">.</button>
+                            <button id="number_equal">=</button>
                         </div>
                     </div>
                     <div class="calculator_buttons_operations">
-                        <button class="operation_clear">Clear</button>
-                        <button class="operation_plus">+</button>
-                        <button class="operation_minus">-</button>
-                        <button class="operation_multiply">*</button>
-                        <button class="operation_divide">/</button>
+                        <button id="operation_clear">Clear</button>
+                        <button id="operation_plus">+</button>
+                        <button id="operation_minus">-</button>
+                        <button id="operation_multiply">*</button>
+                        <button id="operation_divide">/</button>
                     </div>
                 </div>
             </div>

@@ -55,14 +55,14 @@ main{
     flex-direction: column;
     align-items: flex-end;
 }
-
-.calculator_display_operation{
+/*
+#calculator_display_operation{
  
 }
 
-.calculator_display_result{
+#calculator_display_result{
 
-}
+} */
 
 /* ############################
 #          Buttons
@@ -127,19 +127,19 @@ main{
 /* ############################
 #       ROW 1
 #  ############################ */
-.number_7{
+#number_7{
     height: 100%;
     width: 34%;
     border: 1px solid black; 
 }
 
-.number_8{
+#number_8{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
 }
 
-.number_9{
+#number_9{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
@@ -148,19 +148,19 @@ main{
 /* ############################
 #       ROW 2
 #  ############################ */
-.number_4{
+#number_4{
     height: 100%;
     width: 34%;
     border: 1px solid black; 
 }
 
-.number_5{
+#number_5{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
 }
 
-.number_6{
+#number_6{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
@@ -169,19 +169,19 @@ main{
 /* ############################
 #       ROW 3
 #  ############################ */
-.number_1{
+#number_1{
     height: 100%;
     width: 34%;
     border: 1px solid black; 
 }
 
-.number_2{
+#number_2{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
 }
 
-.number_3{
+#number_3{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
@@ -190,19 +190,19 @@ main{
 /* ############################
 #       ROW 4
 #  ############################ */
-.number_0{
+#number_0{
     height: 100%;
     width: 34%;
     border: 1px solid black; 
 }
 
-.number_point{
+#number_point{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
 }
 
-.number_equal{
+#number_equal{
     height: 100%;
     width: 33%;
     border: 1px solid black; 
@@ -212,7 +212,7 @@ main{
 #       Operations
 #
 #  ############################ */
-.calculator_buttons_operations{
+#calculator_buttons_operations{
     height: 100%;
     width: 20%;
     border: 1px solid black;
@@ -221,13 +221,13 @@ main{
     flex-direction: column;
 }
 
-.operation_clear{
+#operation_clear{
     height: 20%;
     width: 100%;
     border: 1px solid black;
 }
 
-.operation_plus{
+#operation_plus{
     height: 20%;
     width: 100%;
     border: 1px solid black;
@@ -235,7 +235,7 @@ main{
     border-radius: 20%;
 }
 
-.operation_minus{
+#operation_minus{
     height: 20%;
     width: 100%;
     border: 1px solid black;
@@ -243,13 +243,13 @@ main{
     border-radius: 50%;
 }
 
-.operation_multiply{
+#operation_multiply{
     height: 20%;
     width: 100%;
     border: 1px solid black;
 }
 
-.operation_divide{
+#operation_divide{
     height: 20%;
     width: 100%;
     border: 1px solid black;

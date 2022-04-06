@@ -18,3 +18,10 @@ function divide(a, b){
 function operate(operation, a, b){
     return operation(a, b);
 }
+
+//We use value as a string.
+let displayValue = "";
+function saveNumbers(value){
+    displayValue = displayValue + value
+}
+
