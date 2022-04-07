@@ -1,33 +1,107 @@
 
+// we covert to Number, then we do operation save in variable c
+// and we convert to string again on the return.
+//a, b -> string with a number "3"
 function add(a, b) {
-    return a + b;
+    a = Number(a);
+    b = Number(b);
+    let c = a + b;
+    return '' + c;
 }
 
+//a, b -> string with a number "3"
 function subtract(a, b){
-    return a - b;
+    a = Number(a);
+    b = Number(b);
+    let c = a - b;
+    return '' + c;
 }
 
+//a, b -> string with a number "3"
 function multiply(a, b){
-    return a*b;
+    a = Number(a);
+    b = Number(b);
+    let c = a*b;
+    return '' + c;
 }
 
+//a, b -> string with a number "3"
 function divide(a, b){
-    return a/b;
+    a = Number(a);
+    b = Number(b);
+    let c = a/b;
+    return '' + c;
 }
 
+//operation -> string with operation "add", ...
+//a, b -> string with a number "3"
 function operate(operation, a, b){
-    return operation(a, b);
+    if(operation == "add") return add(a, b);
+    else if(operation == "subtract") return subtract(a, b);
+    else if(operation == "multiply") return multiply(a, b);
+    else if(operation == "divide") return divide(a, b);
 }
+
+
+let displayValue2 = "0";
+let displayValue = "0";
+
+let lastOperation = "";
+let operation = "";
+let displayOperation = "";
 
 let displayResult = document.getElementById("display_result");
+
 function actualizeDisplay(){
     displayResult.textContent = displayValue;
+    // display2 = `${displayValue2} ${operation} ${displayValue1}` 
 }
 
-let displayValue = "";
 //value --> string that contains a number.
 function saveNumbers(value){
-    displayValue = displayValue + value
+    displayValue = displayValue + value;
+    if(displayValue === "0" + value) displayValue = value;
+    actualizeDisplay();
+}
+
+//value -> string with operation "add", ...
+function saveOperation(value){
+    if(value == "add"){
+        operation = "add";
+        displayOperation = "+";
+    }
+    else if(value == "subtract"){
+        operation = "subtract";
+        displayOperation = "-";
+    }
+    else if(value == "multiply"){
+        operation = "multiply";
+        displayOperation = "*";
+    }
+    else if(value == "divide"){
+        operation = "divide";
+        displayOperation = "/";
+    }
+    doOperation(lastOperation);
+    lastOperation = value;
+    actualizeDisplay();
+}
+
+//value -> string with operation "add", ...
+function doOperation(value){
+    if(displayValue2 == "0"){
+        displayValue2 = displayValue;
+        displayValue = "0";
+    } else {
+        displayValue2 = operate(value, displayValue2, displayValue);
+        displayValue = 0;
+    }
+}
+
+function clear(){
+    displayValue2 = "0";
+    displayValue = "0";
+    operation = "";
     actualizeDisplay();
 }
 
@@ -45,14 +119,15 @@ document.getElementById("number_3").onclick= () => saveNumbers('3');
 
 document.getElementById("number_0").onclick= () => saveNumbers('0');
 
-//document.getElementById("#number_point").onclick=...;
-//document.getElementById("#number_equal").onclick=...;
+//document.getElementById("number_point").onclick=...;
+//document.getElementById("number_equal").onclick=...;
 
-//document.getElementById("#operation_clear").onclick=...;
-//document.getElementById("#operation_plus").onclick=...;
-//document.getElementById("#operation_minus").onclick=...;
-//document.getElementById("#operation_multiply").onclick=...;
-//document.getElementById("#operation_divide").onclick=...;
+document.getElementById("operation_clear").onclick= () => clear();
+
+document.getElementById("operation_plus").onclick= () => saveOperation("add");
+document.getElementById("operation_minus").onclick= () => saveOperation("subtract");
+document.getElementById("operation_multiply").onclick= () => saveOperation("multiply");
+document.getElementById("operation_divide").onclick= () => saveOperation("divide");
 
 // let buttons = document.getElementsByClassName("buttons");
 // for(let i = 0; i < buttons.length; i++){
