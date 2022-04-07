@@ -19,17 +19,17 @@ function operate(operation, a, b){
     return operation(a, b);
 }
 
-let displayValue = "";
-//value --> string that contains a number.
-function saveNumbers(value){
-    displayValue = displayValue + value
-}
-
- let displayResult = document.getElementById("display_result");
+let displayResult = document.getElementById("display_result");
 function actualizeDisplay(){
     displayResult.textContent = displayValue;
 }
 
+let displayValue = "";
+//value --> string that contains a number.
+function saveNumbers(value){
+    displayValue = displayValue + value
+    actualizeDisplay();
+}
 
 document.getElementById("number_7").onclick= () => saveNumbers('7');
 document.getElementById("number_8").onclick= () => saveNumbers('8');
@@ -43,6 +43,8 @@ document.getElementById("number_1").onclick= () => saveNumbers('1');
 document.getElementById("number_2").onclick= () => saveNumbers('2');
 document.getElementById("number_3").onclick= () => saveNumbers('3');
 
+document.getElementById("number_0").onclick= () => saveNumbers('0');
+
 //document.getElementById("#number_point").onclick=...;
 //document.getElementById("#number_equal").onclick=...;
 
@@ -52,7 +54,7 @@ document.getElementById("number_3").onclick= () => saveNumbers('3');
 //document.getElementById("#operation_multiply").onclick=...;
 //document.getElementById("#operation_divide").onclick=...;
 
-// let buttons = document.getElementsByClassName(".buttons");
+// let buttons = document.getElementsByClassName("buttons");
 // for(let i = 0; i < buttons.length; i++){
 //     buttons[i].onclick = () => actualizeDisplay();
 // }
