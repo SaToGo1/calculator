@@ -42,19 +42,28 @@ function operate(operation, a, b){
     else if(operation == "divide") return divide(a, b);
 }
 
-
+//string -> save the numbers that we will operate.
 let displayValue2 = "0";
 let displayValue = "0";
 
+//string -> save operation "add", ...
 let lastOperation = "";
 let operation = "";
+//string -> save operation "+", ... to show in the display.
 let displayOperation = "";
 
+//HTML element of the display, actual number.
 let displayResult = document.getElementById("display_result");
+//HTML element of the display, total expresison.
+let displayFullOperation = document.getElementById("display_operation");
 
 function actualizeDisplay(){
     displayResult.textContent = displayValue;
-    // display2 = `${displayValue2} ${operation} ${displayValue1}` 
+    if(displayValue2 == "0"){
+        displayFullOperation.textContent = `${displayValue}` 
+    } else {
+        displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue}`    
+    }
 }
 
 //value --> string that contains a number.
