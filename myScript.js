@@ -29,6 +29,7 @@ function multiply(a, b){
 function divide(a, b){
     a = Number(a);
     b = Number(b);
+    if(b == 0) return 'ERROR';
     let c = a/b;
     return '' + c;
 }
@@ -62,9 +63,12 @@ let displayFullOperation = document.getElementById("display_operation");
 function actualizeDisplay(result){
     displayResult.textContent = result;
     if(displayValue2 == "0"|| displayValue2 == ""){
-        displayFullOperation.textContent = `${displayValue}` 
+        displayFullOperation.textContent = `${displayValue}`;
+    } else if(displayValue2 == 'ERROR'){
+        displayFullOperation.textContent = `${displayValue2}`;
+        displayValue2 = "0";
     } else {
-        displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue}`  
+        displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue}`;
     }
 }
 
@@ -123,6 +127,10 @@ function equal(){
     displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue} =`;
     displayValue2 = operate(operation, displayValue2, displayValue);
     displayResult.textContent = displayValue2;
+    if(displayValue2 == 'ERROR'){
+        displayFullOperation.textContent = `${displayValue2}`;
+        displayValue2 = "0";
+    }
 }
 
 document.getElementById("number_7").onclick= () => saveNumbers('7');
