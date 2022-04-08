@@ -57,20 +57,22 @@ let displayResult = document.getElementById("display_result");
 //HTML element of the display, total expresison.
 let displayFullOperation = document.getElementById("display_operation");
 
-function actualizeDisplay(){
-    displayResult.textContent = displayValue;
-    if(displayValue2 == "0"){
+//result --> string with the number to show in the display
+//              it can be displayValue or displayValue2.
+function actualizeDisplay(result){
+    displayResult.textContent = result;
+    if(displayValue2 == "0"|| displayValue2 == ""){
         displayFullOperation.textContent = `${displayValue}` 
     } else {
-        displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue}`    
+        displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue}`  
     }
 }
 
 //value --> string that contains a number.
 function saveNumbers(value){
     displayValue = displayValue + value;
-    if(displayValue === "0" + value) displayValue = value;
-    actualizeDisplay();
+    if(displayValue === "0" + value) displayValue = value; //doesn't save the default 0.
+    actualizeDisplay(displayValue);
 }
 
 //value -> string with operation "add", ...
@@ -93,7 +95,7 @@ function saveOperation(value){
     }
     doOperation(lastOperation);
     lastOperation = value;
-    actualizeDisplay();
+    actualizeDisplay(displayValue2);
 }
 
 //value -> string with operation "add", ...
@@ -111,7 +113,13 @@ function clear(){
     displayValue2 = "0";
     displayValue = "0";
     operation = "";
-    actualizeDisplay();
+    actualizeDisplay(displayValue);
+}
+
+function equal(){
+    displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue} =`;
+    displayValue = operate(operation, displayValue2, displayValue);
+    displayResult.textContent = displayValue;
 }
 
 document.getElementById("number_7").onclick= () => saveNumbers('7');
@@ -129,7 +137,7 @@ document.getElementById("number_3").onclick= () => saveNumbers('3');
 document.getElementById("number_0").onclick= () => saveNumbers('0');
 
 //document.getElementById("number_point").onclick=...;
-//document.getElementById("number_equal").onclick=...;
+document.getElementById("number_equal").onclick= () => equal();
 
 document.getElementById("operation_clear").onclick= () => clear();
 
