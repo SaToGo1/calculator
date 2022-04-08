@@ -117,9 +117,12 @@ function clear(){
 }
 
 function equal(){
+    if(operation == ""){
+        return 0;
+    }
     displayFullOperation.textContent = `${displayValue2} ${displayOperation} ${displayValue} =`;
-    displayValue = operate(operation, displayValue2, displayValue);
-    displayResult.textContent = displayValue;
+    displayValue2 = operate(operation, displayValue2, displayValue);
+    displayResult.textContent = displayValue2;
 }
 
 document.getElementById("number_7").onclick= () => saveNumbers('7');
