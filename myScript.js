@@ -159,6 +159,15 @@ function equalOperation(){
     }
 }
 
+function backspaceOperation(){
+    if(displayValue.length == 1){
+        displayValue = "0";
+    } else {
+        displayValue = displayValue.slice(0, -1);
+    }
+    actualizeDisplay(displayValue);
+}
+
 // HTML BUTTONS 
 document.getElementById("number_7").onclick= () => saveNumbers('7');
 document.getElementById("number_8").onclick= () => saveNumbers('8');
@@ -178,7 +187,7 @@ document.getElementById("number_point").onclick= () => savePoint('.');
 document.getElementById("number_equal").onclick= () => equalOperation();
 
 document.getElementById("operation_clear").onclick= () => clear();
-// document.getElementById("operation_backspace").onclick= () => ;
+document.getElementById("operation_backspace").onclick= () => backspaceOperation();
 
 document.getElementById("operation_plus").onclick= () => saveOperation("add");
 document.getElementById("operation_minus").onclick= () => saveOperation("subtract");
