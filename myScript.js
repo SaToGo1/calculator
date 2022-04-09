@@ -92,6 +92,7 @@ function saveNumbers(value){
 //add point to our actual number in display.
 //value --> string that should always be "."
 function savePoint(value) {
+    
     //summation of all the points in our string.
     let total = 0;
     let numbers = displayValue.split("");
@@ -177,6 +178,7 @@ document.getElementById("number_point").onclick= () => savePoint('.');
 document.getElementById("number_equal").onclick= () => equalOperation();
 
 document.getElementById("operation_clear").onclick= () => clear();
+// document.getElementById("operation_backspace").onclick= () => ;
 
 document.getElementById("operation_plus").onclick= () => saveOperation("add");
 document.getElementById("operation_minus").onclick= () => saveOperation("subtract");
